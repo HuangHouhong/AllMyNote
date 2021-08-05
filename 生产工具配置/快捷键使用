@@ -1,0 +1,71 @@
+
+系统：
+	切换输入法   		点击caps
+	切换英文大小写  	长按caps
+	全屏/推出全屏 		ctrl+win+F
+	最小化 			ctrl + M
+	隐藏				ctrl + H
+	截屏 			ctrl + shift +4
+	显示桌面 			F11
+	强制退出应用		ctrl + alt + esc
+	显示隐藏文件		ctrl + shift + .
+
+
+
+bash
+	停止命令行 ctrl + .
+	删除单词 com + W
+	光标移动到行首 com + A
+	光标移动到行尾 com + E
+	光标移动一个单词 alt + 左右箭头
+
+
+
+浏览器
+	关闭标签页 ctrl + w
+	打开标签页 ctrl + t
+
+
+android studio 快捷键（在mac中，我将ctrl 与 command 键位置互换了一下，并且修改了一些快捷键）
+	删除行 delete line  ： 	ctrl+ backspace / ctrl + y
+	根据文件名查找文件 : 		双击shift
+	光标移动一行： 			ctrl + 左右箭头
+	光标移动一个字符： 			alt + 左右箭头
+	回到上次/下次的光标位置：	ctrl + alt + 左右箭头
+	generate：				win + 回车
+	自动导入删除包：			win + alt + O
+
+	
+
+
+常用命令
+
+	解压zip文件：
+		unzip ....
+
+
+git常用命令
+	
+	查看stash列表		git stash list
+	删除stash所有		git stash clear
+
+
+
+git push origin HEAD:refs/for/develop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
