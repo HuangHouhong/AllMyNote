@@ -75,7 +75,7 @@ git add .
 git commit -s
 ```
 
-使用 git branch -vv 命令可以看到当前本地分支的名称为master，为了学习，使用命令讲本地分支明明为 local_branch
+使用 git branch -vv 命令可以看到当前本地分支的名称为master，为了学习，使用命令把本地分支重命名为 local_branch
 
 ```
 git branch -m master local_branch
