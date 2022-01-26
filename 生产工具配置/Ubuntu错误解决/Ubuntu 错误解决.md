@@ -1,5 +1,7 @@
 # 联网问题
 
+## 1 手动配置联网
+
 表现为Ubuntu开机无法自动联网，而且在 设置 -》网络  中没有有线连接者个选项
 
 首先，ifconfig 查看启动的网卡，发现尽然没了 eth0 ，只有一个 lo了，如下所示：
@@ -13,6 +15,8 @@
 发现多了个 etp34s0，但是没有使用，直接使用如下命令连接：
 
 sudo dhclient enp34s0 
+
+## 2 永久配置自动联网
 
 这样虽然连上网了，但是每次进来都需要重新连接，太麻烦。按照如下配置添加到自动中：
 
@@ -42,6 +46,21 @@ sudo dhclient enp34s0
    修改完成后，重启networkmanager服务，即 sudo service network-manager restart
 
    完成后，就可以看到设置下面多了一个有线连接。
+
+## 3 解决每隔几分钟断网问题
+
+上面步骤，可以保证能够上网，也有了有线连接，但是存在一个问题，就是每间隔几分钟，就断网了，就需要重新连接。
+
+首先，修改 /etc/network/interfaces 文件，修改内容如下：
+
+```bash
+auto lo
+iface lo inet loopback
+```
+
+再修改 /etc/ppp/options 文件，
+
+把 lcp-echo-interval 和 lcp-echo-failure 数字调整大点。第一个我调为了30 ，第二个我调整为了100
 
 # win10 与 Ubuntu 双系统开机直接进入win10
 
