@@ -1,22 +1,21 @@
 # AllMyNote
 抄书指南，自己学习使用。抄一遍，即是学习又是复习的资料
 
+-  android 进阶解密
+   - 类加载机制
+   - android系统启动流程
+-  android 源码编译
 -  as项目运行
-
-  - 国内android项目无法运行解决方式
-
+   - 国内android项目无法运行解决方式
 - git 
 
   - github的使用
-
 - gradle
 
   - android gradle 权威指南书籍观后总结
-
 - kotlin
 
   - kotlin协程
-  
 - 生产工具配置
 
   - flutter 配置
