@@ -6,7 +6,7 @@ Activity 启动分为两种，一个是根 Activity 的启动过程，一个是�
 
 <img src="./act1.png" style="zoom:40%">
 
-如上图所示， 根 Activity 需要经历所有步骤。而普通的 Activity 只需要尽力1,4 步骤。通过 Zygote进程创建应用程序进程的步骤不需要了.
+如上图所示， 根 Activity 需要经历所有步骤。而普通的 Activity 只需要经历1,4 步骤。通过 Zygote进程创建应用程序进程的步骤不需要了.
 
 # 1.Launcher 请求 AMS
 
