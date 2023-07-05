@@ -133,9 +133,23 @@ sudo apt-get update
 sudo apt-get install terminator
 安装完成后，修改默认快捷键启动的终端为Terminator,执行下面命令
 sudo update-alternatives --config x-terminal-emulator
-如下图所示，我的terminator安装目录在/usr/bin/terminator目录下，在图中显示的是0，当前按快捷键启动的默认是1，所以直接输入0即可。
+如下图所示，我的terminator安装目录在/usr/bin/目录下的terminator，在图中显示的是0，当前按快捷键启动的默认是1，所以直接输入0即可。
 
 <img src="./ubuntu5.1.png">
+
+但是在ubuntu22.04中，使用sudo update-alternatives --config x-terminal-emulator命令会告诉你只有一个候选项，但是你明明装了两个终端呀。这个时候可以到/usr/bin目录下，然后 ls | grep term 查看有几个终端。
+
+<img src="./ubuntu5.2-2.png">
+
+可以看到第四个选项，其实就是我们安装的终端，然后使用 exec terminator确认一下，发现就是的。然后执行下列命令：
+
+sudo apt install dconf-editor
+
+执行完毕后，即可通过 dconf-editor打开软件，然后依次进入下面目录org > gnome > desktop > applications > terminal，
+
+进入后修改exec参数为 terminator，修改exec-arg参数为-e
+
+修改完成后，就可以通过快捷键打开terninator啦。
 
 觉得颜色太丑，所以更改一下，上面接好了五个配置文件，这里只需要选择一个，我选择在.bashrc文件下添加下面一行即可：
 
